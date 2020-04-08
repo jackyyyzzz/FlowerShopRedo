@@ -1,0 +1,50 @@
+<!-- Header -->
+<%= require('../components/header.ejs')() %>
+
+    <!-- Banner -->
+    <%= require('../components/slideshow.ejs')() %>
+
+        <!-- Section -->
+        <section id="promotions">
+            <header class="major">
+                <h2>Promotions</h2>
+            </header>
+            <div class="features">
+                <article>
+                    <span class="icon solid fa-percent"></span>
+                    <div class="content">
+                        <h3>Mother's day promotion</h3>
+                        <p>All flowers free on <b>feb 2</b> to <b>feb 3</b></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section>
+            <header class="major">
+                <h2>Our Products</h2>
+            </header>
+            <div class="posts">
+                <article>
+                    <a href="joy.html" class="image"><img src="../images/display-pictures/joy.jpg" alt="" /></a>
+                    <h3>JOY</h3>
+                    <p>SOMETHING SOMETHING</p>
+                    <ul class="actions">
+                        <li><a href="joy.html" class="button">More</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <a href="peace.html" class="image"><img src="../images/display-pictures/peace.jpg" alt="" /></a>
+                    <h3>PEACE</h3>
+                    <p>SOMETHING SOMETHING</p>
+                    <ul class="actions">
+                        <li><a href="peace.html" class="button">More</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <%= require('../components/footer.ejs')() %>
