@@ -1,42 +1,33 @@
 <section>
-    <header class="major">
-        <h1>
-            <%= name %>
-        </h1>
-    </header>
-    <div class="box alt">
-        <div class="row gtr-50 gtr-uniform">
-            <% const fs = require('fs'); %>
-                <% const imagesList = fs.readdirSync('./src/images/display-pictures/' + name); %>
-                    <% imagesList.forEach((photo)=>{ %>
+  <header class="major">
+    <h1>
+      <%= name %>
+    </h1>
+  </header>
+  <div class="box alt">
+    <div class="row gtr-50 gtr-uniform">
+      <% const fs = require('fs'); %>
+        <% const imagesList = fs.readdirSync('./src/images/display-pictures/' + name); %>
+          <% imagesList.forEach((photo)=>{ %>
 
-                        <div class="col-4 col-6-small">
-                            <span class="image fit"><img src="/src/images/display-pictures/<%= name %>/<%= photo %>"></span>
+            <div class="col-4 col-6-small">
+              <span class="image fit"><img src="/src/images/display-pictures/<%= name %>/<%= photo %>" /></span>
 
-                            <% photo = photo.slice(0,-4) %>
-                                <% const imageInfo = photo.split(',') %>
+              <% photo = photo.slice(0,-4) %>
 
-                                    <div class="table-wrapper">
-                                        <table class="alt">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        <%= imageInfo[0] %>
-                                                    </th>
-                                                    <th>
-                                                        <%= imageInfo[1] %>
-                                                    </th>
-                                                    <th>
-                                                        $
-                                                        <%= imageInfo[2] %>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                        </table>
-                                    </div>
-                        </div>
-                        <% }) %>
-        </div>
+                <div class="table-wrapper">
+                  <table class="alt">
+                    <thead>
+                      <tr>
+                        <th>
+                          <%= photo %>
+                        </th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+            </div>
+            <% }) %>
     </div>
-
+  </div>
 </section>
